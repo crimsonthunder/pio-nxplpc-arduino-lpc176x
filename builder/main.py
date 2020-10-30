@@ -30,14 +30,14 @@ if "BOARD" in env:
     target_mcu = env.BoardConfig().get("build.mcu").upper()
 
 env.Replace(
-    AR="arm-none-eabi-ar",
-    AS="arm-none-eabi-as",
-    CC="arm-none-eabi-gcc",
-    CXX="arm-none-eabi-g++",
-    GDB="arm-none-eabi-gdb",
-    OBJCOPY="arm-none-eabi-objcopy",
-    RANLIB="arm-none-eabi-ranlib",
-    SIZETOOL="arm-none-eabi-size",
+    AR="llvm-ar",
+    AS="llvm-as",
+    CC="llvm-gcc",
+    CXX="llvm-g++",
+    GDB="llvm-gdb",
+    OBJCOPY="llvm-objcopy",
+    RANLIB="llvm-ranlib",
+    SIZETOOL="llvm-size",
 
     ARFLAGS=["rc"],
 
